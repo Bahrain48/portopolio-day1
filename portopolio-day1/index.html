@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio M. Bahrain Arrafi - XI RPL 1 SMK Telkom Lampung. Software Engineering, Web Development, dan Proyek Interaktif.">
+  <meta name="keywords" content="M Bahrain Arrafi, SMK Telkom Lampung, Portofolio RPL, Web Developer Lampung, Rekayasa Perangkat Lunak">
+  <meta name="author" content="M. Bahrain Arrafi">
+  <meta name="theme-color" content="#07090e">
+  <title>M. Bahrain Arrafi | Software Engineer & Creative Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Background Glow & Cyber Grid -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- Custom Cursor Glow Pointer -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Navbar -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="navLogo">
+        <div class="logo-box">
+          <span class="logo-text">BA</span>
+          <span class="logo-pulse"></span>
+        </div>
+        <div class="logo-meta">
+          <span class="logo-name">Bahrain Arrafi</span>
+          <span class="logo-sub">XI RPL 1 · Telkom</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Beranda</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">Tentang</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Keahlian</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Proyek</a></li>
+          <li class="nav-item"><a href="#game" class="nav-link highlight-link">Cyber Arcade</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Controls -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-outline nav-cta">Let's Connect</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Buka Menu Navigasi">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <!-- Hero Left Content -->
+        <div class="hero-content">
+          <div class="status-badge" data-tilt>
+            <span class="status-dot"></span>
+            <span class="status-text">Siap Kolaborasi · Siswa SMK Telkom Lampung</span>
+          </div>
+
+          <h1 class="hero-title">
+            Membangun Solusi Digital dengan <span class="gradient-text">Kode & Kreativitas.</span>
+          </h1>
+
+          <div class="hero-intro-box">
+            <p class="hero-greeting">Halo, saya <strong class="name-highlight">M. Bahrain Arrafi</strong></p>
+            <div class="typing-wrapper">
+              <span class="typing-prefix">&gt; Focus: </span>
+              <span class="typing-text" id="typingText"></span>
+              <span class="typing-cursor">|</span>
+            </div>
+          </div>
+
+          <p class="hero-description">
+            Siswa <strong>Kelas XI RPL 1</strong> di <strong>SMK Telkom Lampung</strong>. Memiliki antusiasme tinggi pada <em>Software Engineering</em>, arsitektur web modern, dan pengalaman pengguna interaktif yang tidak konvensional.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="btnExplore">
+              <span>Eksplorasi Proyek</span>
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#game" class="btn btn-arcade" id="btnPlayGame">
+              <span class="arcade-icon">👾</span>
+              <span>Mainkan Game</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              <span>Hubungi Saya</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-number">XI</span>
+              <span class="metric-label">RPL 1</span>
+            </div>
+            <div class="metric-separator"></div>
+            <div class="metric-item">
+              <span class="metric-number" id="projectsCounter">12+</span>
+              <span class="metric-label">Proyek & Latihan</span>
+            </div>
+            <div class="metric-separator"></div>
+            <div class="metric-item">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Passion & Dedikasi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Holographic Card -->
+        <div class="hero-visual">
+          <div class="hologram-card" id="heroCard">
+            <div class="card-glass-glow"></div>
+            
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-title">bahrain@rpl-telkom: ~/portfolio</div>
+              <div class="terminal-action-tag">ACTIVE</div>
+            </div>
+
+            <div class="terminal-body">
+              <div class="code-line"><span class="c-keyword">const</span> <span class="c-var">developer</span> = {</div>
+              <div class="code-line indent-1"><span class="c-key">name</span>: <span class="c-string">"M. Bahrain Arrafi"</span>,</div>
+              <div class="code-line indent-1"><span class="c-key">grade</span>: <span class="c-string">"XI RPL 1"</span>,</div>
+              <div class="code-line indent-1"><span class="c-key">school</span>: <span class="c-string">"SMK Telkom Lampung"</span>,</div>
+              <div class="code-line indent-1"><span class="c-key">specialty</span>: [</div>
+              <div class="code-line indent-2"><span class="c-string">"Web Architecture"</span>,</div>
+              <div class="code-line indent-2"><span class="c-string">"Fullstack Exploration"</span>,</div>
+              <div class="code-line indent-2"><span class="c-string">"Interactive UI/UX"</span></div>
+              <div class="code-line indent-1">],</div>
+              <div class="code-line indent-1"><span class="c-key">motto</span>: <span class="c-string">"Clean code, seamless user experience."</span>,</div>
+              <div class="code-line indent-1"><span class="c-key">status</span>: <span class="c-bool">"Always Learning 🚀"</span></div>
+              <div class="code-line">};</div>
+              <div class="code-line mt-2"><span class="c-comment">// Telkom Students Make It Happen!</span></div>
+              <div class="code-line"><span class="c-func">developer</span>.<span class="c-method">buildAmazingThings</span>();</div>
+            </div>
+
+            <!-- Floating Badges on Card -->
+            <div class="floating-tech-badge badge-top-right">
+              <span class="badge-icon">⚡</span>
+              <span>Fast Learner</span>
+            </div>
+            <div class="floating-tech-badge badge-bottom-left">
+              <span class="badge-icon">📍</span>
+              <span>Telkom Lampung</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-kicker">PROFIL SINGKAT</p>
+          <h2 class="section-title">Dedikasi Belajar di Jalur <span class="gradient-text">Software Engineering</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- About Card 1: Story -->
+          <div class="about-card story-card">
+            <div class="card-icon-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Siapa Saya?</h3>
+            <p>
+              Saya adalah <strong>M. Bahrain Arrafi</strong>, siswa program keahlian <strong>Rekayasa Perangkat Lunak (RPL)</strong> di <strong>SMK Telkom Lampung</strong>. Memasuki jenjang kelas XI, saya aktif memperdalam fundamental pemrograman, algoritma sistem, pembuatan aplikasi berbasis web, hingga manajemen basis data.
+            </p>
+            <p class="mt-2">
+              Bagi saya, pemrograman bukan sekadar menulis baris kode yang berjalan, melainkan seni merancang solusi nyata yang memudahkan aktivitas orang banyak dengan estetika modern yang menyenangkan.
+            </p>
+          </div>
+
+          <!-- About Card 2: Pillars -->
+          <div class="about-card pillars-card">
+            <h3>Pilar Keahlian RPL</h3>
+            <ul class="pillars-list">
+              <li class="pillar-item">
+                <div class="pillar-icon">💻</div>
+                <div class="pillar-info">
+                  <strong>Frontend Development</strong>
+                  <p>Membangun antarmuka interaktif, responsif, dan animasi mulus yang memanjakan mata pengguna.</p>
+                </div>
+              </li>
+              <li class="pillar-item">
+                <div class="pillar-icon">⚙️</div>
+                <div class="pillar-info">
+                  <strong>Backend & Logic</strong>
+                  <p>Memahami alur logika server, RESTful API, otentikasi data, dan integrasi backend modern.</p>
+                </div>
+              </li>
+              <li class="pillar-item">
+                <div class="pillar-icon">🗄️</div>
+                <div class="pillar-info">
+                  <strong>Database Architecture</strong>
+                  <p>Perancangan skema relasional, normalisasi tabel, dan query MySQL yang terstruktur dan aman.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-kicker">ARSENAL TEKNOLOGI</p>
+          <h2 class="section-title">Keahlian & <span class="gradient-text">Stack Pemrograman</span></h2>
+          <p class="section-subtitle">Bahasa dan perangkat lunak yang terus saya latih dan terapkan dalam kurikulum RPL SMK Telkom.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: HTML5 -->
+          <div class="skill-card" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap html-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M12 2L3 5l2 14 7 3 7-3 2-14-9-3zm0 2.2l6.8 2.3-1.6 11.2-5.2 2.2-5.2-2.2L5.2 6.5 12 4.2zM8.5 8h7v2h-5v2h4.5v3.5L12 16.5l-3-1V13.8h1.8v.7l1.2.4 1.2-.4v-1H8.5V8z"/>
+                </svg>
+              </div>
+              <div class="skill-badge">Struktur Web</div>
+            </div>
+            <h3 class="skill-name">HTML5 Semantik</h3>
+            <p class="skill-desc">Fondasi dokumen web yang terstruktur, ramah SEO, dan aksesibilitas tinggi.</p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="width: 95%;"></div>
+            </div>
+            <span class="skill-pct">95% Mastery</span>
+          </div>
+
+          <!-- Skill Card 2: CSS3 / Modern Styling -->
+          <div class="skill-card" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap css-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M12 2L3 5l2 14 7 3 7-3 2-14-9-3zm5.2 6.5h-8l.3 2.5h7.4l-.8 5.6-4.1 1.7-4.1-1.7-.2-1.7h2l.1.7 2.2.9 2.2-.9.4-2.8H7.2L6.5 6.5h11.2l-.5 2z"/>
+                </svg>
+              </div>
+              <div class="skill-badge">Styling & UI</div>
+            </div>
+            <h3 class="skill-name">CSS3 & Glassmorphism</h3>
+            <p class="skill-desc">Flexbox, CSS Grid, keyframe animations, dark mode, dan layout responsif multi-device.</p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="width: 90%;"></div>
+            </div>
+            <span class="skill-pct">90% Mastery</span>
+          </div>
+
+          <!-- Skill Card 3: JavaScript -->
+          <div class="skill-card" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap js-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M3 3h18v18H3V3zm11.5 13.5c1.4 0 2.3-.7 2.8-1.5l-1.4-.9c-.3.5-.7.8-1.4.8-.8 0-1.3-.4-1.3-1.2V9.8h-1.8v4.6c0 1.9 1.1 2.6 3.1 2.6zm-6.2 0c1.7 0 2.6-.9 2.6-2.2 0-1.2-.7-1.8-2.1-2.2l-.6-.2c-.7-.2-1-.5-1-.9 0-.5.4-.8 1.1-.8.7 0 1.2.3 1.5.8l1.3-.9c-.6-.9-1.5-1.4-2.8-1.4-1.6 0-2.6.9-2.6 2.1 0 1.2.8 1.8 2 2.1l.6.2c.8.2 1.2.5 1.2 1 0 .6-.5.9-1.3.9-.9 0-1.5-.4-1.9-1l-1.4.9c.7 1 1.7 1.6 2.9 1.6z"/>
+                </svg>
+              </div>
+              <div class="skill-badge">Logic & Interaksi</div>
+            </div>
+            <h3 class="skill-name">JavaScript ES6+</h3>
+            <p class="skill-desc">Manipulasi DOM, asynchronous (Async/Await, Fetch API), Canvas API, dan logika aplikasi web.</p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="width: 88%;"></div>
+            </div>
+            <span class="skill-pct">88% Mastery</span>
+          </div>
+
+          <!-- Skill Card 4: PHP & Laravel -->
+          <div class="skill-card" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap php-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2c1.1 0 2-.9 2-2s-.9-2-2-2H8v8H6V6h5c2.21 0 4 1.79 4 4s-1.79 4-4 4zm6 0h-2v-4h2c1.1 0 2-.9 2-2s-.9-2-2-2h-3V6h3c2.21 0 4 1.79 4 4s-1.79 4-4 4z"/>
+                </svg>
+              </div>
+              <div class="skill-badge">Backend RPL</div>
+            </div>
+            <h3 class="skill-name">PHP & Laravel Basics</h3>
+            <p class="skill-desc">Pengembangan server-side, routing MVC, templating Blade, dan integrasi autentikasi.</p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="width: 82%;"></div>
+            </div>
+            <span class="skill-pct">82% Mastery</span>
+          </div>
+
+          <!-- Skill Card 5: MySQL Database -->
+          <div class="skill-card" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap db-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M12 2C7.58 2 4 3.79 4 6v12c0 2.21 3.58 4 8 4s8-1.79 8-4V6c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.43 6 2s-2.13 2-6 2-6-1.43-6-2 2.13-2 6-2zm6 14c0 .57-2.13 2-6 2s-6-1.43-6-2v-2.35c1.64 1.03 3.75 1.55 6 1.55s4.36-.52 6-1.55V18zm0-4.5c0 .57-2.13 2-6 2s-6-1.43-6-2v-2.35c1.64 1.03 3.75 1.55 6 1.55s4.36-.52 6-1.55v2.35z"/>
+                </svg>
+              </div>
+              <div class="skill-badge">Basis Data</div>
+            </div>
+            <h3 class="skill-name">MySQL & Database Design</h3>
+            <p class="skill-desc">Pembuatan relasi tabel (ERD), normalisasi 1NF-3NF, agregasi query, dan integritas data.</p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+            <span class="skill-pct">85% Mastery</span>
+          </div>
+
+          <!-- Skill Card 6: Git & Workflow -->
+          <div class="skill-card" data-tilt>
+            <div class="skill-header">
+              <div class="skill-icon-wrap git-icon">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M19.5 9.5l-5-5a2.12 2.12 0 00-3 0L9.4 6.6l2.3 2.3c.5-.2 1.1-.1 1.5.3.4.4.5 1 .3 1.5l2.2 2.2c.5-.2 1.1-.1 1.5.3.6.6.6 1.5 0 2.1s-1.5.6-2.1 0c-.4-.4-.5-1-.3-1.5l-2.2-2.2c-.3.1-.7.2-1 .2s-.7-.1-1-.2l-2.4 2.4c.1.3.2.7.2 1 0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.4 0 .7.1 1 .2l2.4-2.4c-.1-.3-.2-.7-.2-1 0-.6.2-1.1.6-1.5L11.5 3c1.6-1.6 4.1-1.6 5.7 0l5 5c1.6 1.6 1.6 4.1 0 5.7l-7.3 7.3a4.03 4.03 0 01-5.7 0l-5-5 1.4-1.4 5 5c.8.8 2.1.8 2.8 0l7.3-7.3a2.12 2.12 0 000-3z"/>
+                </svg>
+              </div>
+              <div class="skill-badge">Version Control</div>
+            </div>
+            <h3 class="skill-name">Git & GitHub Collab</h3>
+            <p class="skill-desc">Manajemen branch, pull request, resolusi merge conflict, dan standarisasi commit convention.</p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="width: 86%;"></div>
+            </div>
+            <span class="skill-pct">86% Mastery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-kicker">SHOWCASE KARYA</p>
+          <h2 class="section-title">Proyek Pilihan <span class="gradient-text">Anak RPL</span></h2>
+          <p class="section-subtitle">Simulasi dan aplikasi nyata yang dikembangkan selama studi di SMK Telkom Lampung.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card" data-tilt>
+            <div class="project-preview-mockup school-bg">
+              <div class="mockup-header">
+                <span class="mock-dot"></span>
+                <span class="mock-dot"></span>
+                <span class="mock-dot"></span>
+                <span class="mock-url">telkom-smart-presensi.local</span>
+              </div>
+              <div class="mockup-content">
+                <div class="mock-badge">SMK TELKOM SYSTEM</div>
+                <div class="mock-stat-bar">
+                  <div class="stat-pill">98% Kehadiran Siswa</div>
+                  <div class="stat-pill success">Live QR Ready</div>
+                </div>
+                <div class="mock-chart-visual">
+                  <div class="chart-col col-1"></div>
+                  <div class="chart-col col-2"></div>
+                  <div class="chart-col col-3"></div>
+                  <div class="chart-col col-4"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">PHP Laravel</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Tailwind CSS</span>
+              </div>
+              <h3 class="project-title">Telkom Smart Academic & Presensi</h3>
+              <p class="project-desc">
+                Sistem informasi manajemen presensi digital siswa berbasis QR Code dinamis dan rekapitulasi nilai rapor dengan portal login multi-role (Siswa, Guru, Admin).
+              </p>
+              <div class="project-footer">
+                <button class="project-link-btn" onclick="openProjectModal('smart-presensi')">
+                  <span>Lihat Detail & Fitur</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-tilt>
+            <div class="project-preview-mockup pos-bg">
+              <div class="mockup-header">
+                <span class="mock-dot"></span>
+                <span class="mock-dot"></span>
+                <span class="mock-dot"></span>
+                <span class="mock-url">aurapos.cybercloud.id</span>
+              </div>
+              <div class="mockup-content">
+                <div class="mock-badge">AURA POS MODERN</div>
+                <div class="mock-pos-terminal">
+                  <div class="pos-item">☕ Kopi Telkom - Rp15.000</div>
+                  <div class="pos-item">⚡ Snack RPL - Rp8.000</div>
+                  <div class="pos-total">Total: <strong>Rp23.000</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">JavaScript ES6</span>
+                <span class="tag">IndexedDB</span>
+                <span class="tag">PWA Ready</span>
+              </div>
+              <h3 class="project-title">Aura POS - Kasir Pintar Modern</h3>
+              <p class="project-desc">
+                Aplikasi kasir kas toko ritel dan kantin sekolah dengan sistem kalkulasi cepat, pencetakan struk thermal, laporan laba-rugi otomatis, dan mode offline-first.
+              </p>
+              <div class="project-footer">
+                <button class="project-link-btn" onclick="openProjectModal('aura-pos')">
+                  <span>Lihat Detail & Fitur</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-tilt>
+            <div class="project-preview-mockup cyber-bg">
+              <div class="mockup-header">
+                <span class="mock-dot"></span>
+                <span class="mock-dot"></span>
+                <span class="mock-dot"></span>
+                <span class="mock-url">telkom-perpus-ai.web.app</span>
+              </div>
+              <div class="mockup-content">
+                <div class="mock-badge">SMART LIBRARY CATALOG</div>
+                <div class="mock-search-bar">
+                  <span class="search-ico">🔍</span> Cari: "Struktur Data C++"
+                </div>
+                <div class="mock-book-cards">
+                  <div class="book-pill">📗 Algoritma RPL (Tersedia)</div>
+                  <div class="book-pill">📘 Modern Web Dev (Dipinjam)</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">REST API</span>
+                <span class="tag">Modern CSS</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <h3 class="project-title">Perpustakaan Digital Telkom</h3>
+              <p class="project-desc">
+                Katalog digital perpustakaan sekolah dengan fitur rekomendasi buku otomatis, sistem tenggat pengembalian berperingatan, dan histori peminjaman siswa terintegrasi.
+              </p>
+              <div class="project-footer">
+                <button class="project-link-btn" onclick="openProjectModal('library-digital')">
+                  <span>Lihat Detail & Fitur</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME SECTION: CYBERPUNK SNAKE ARCADE -->
+    <section class="section game-section" id="game">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="arcade-badge-pill">
+            <span class="arcade-flicker">ARCADE ZONE</span>
+          </div>
+          <h2 class="section-title">Cyberpunk <span class="gradient-text">Neon Snake Protocol</span></h2>
+          <p class="section-subtitle">
+            Bosan dengan portofolio biasa yang monoton? Uji refleks Anda sekarang! Game arcade interaktif ini dibuat murni dengan <strong>HTML5 Canvas & Vanilla JavaScript</strong>.
+          </p>
+          <div class="title-underline"></div>
+        </div>
+
+        <!-- Arcade Machine Cabinet -->
+        <div class="arcade-wrapper">
+          <div class="arcade-cabinet">
+            <!-- Arcade Screen Header -->
+            <div class="arcade-top-bar">
+              <div class="scoreboard-item">
+                <span class="hud-label">SKOR</span>
+                <span class="hud-val neon-cyan" id="currentScore">0</span>
+              </div>
+              <div class="arcade-brand">
+                <span class="brand-sub">CYBER PROTOCOL V2.6</span>
+                <span class="brand-model">SMK TELKOM RETRO EDITION</span>
+              </div>
+              <div class="scoreboard-item">
+                <span class="hud-label">REKOR TERTINGGI</span>
+                <span class="hud-val neon-purple" id="highScore">0</span>
+              </div>
+            </div>
+
+            <!-- Canvas Container -->
+            <div class="canvas-wrapper" id="canvasWrapper">
+              <canvas id="gameCanvas" width="480" height="480"></canvas>
+
+              <!-- Scanline and CRT Glare Overlay -->
+              <div class="crt-overlay"></div>
+
+              <!-- Start / Game Over Overlay Modal -->
+              <div class="game-overlay" id="gameOverlay">
+                <div class="overlay-card">
+                  <div class="arcade-icon-huge" id="overlayIcon">🕹️</div>
+                  <h3 class="overlay-title" id="overlayTitle">CYBER SNAKE PROTOCOL</h3>
+                  <p class="overlay-desc" id="overlayDesc">
+                    Kumpulkan Neon Data Orbs dan hindari tabrakan dengan firewall dinding atau ekor sendiri.
+                  </p>
+                  
+                  <div class="overlay-stats" id="overlayStats" style="display: none;">
+                    <div class="stat-box">
+                      <span>Skor Akhir</span>
+                      <strong id="finalScoreVal">0</strong>
+                    </div>
+                    <div class="stat-box">
+                      <span>High Score</span>
+                      <strong id="overlayHighScoreVal">0</strong>
+                    </div>
+                  </div>
+
+                  <div class="overlay-controls-guide">
+                    <span>🎮 Gunakan tombol <strong>W, A, S, D</strong> atau <strong>Panah Keyboard</strong> (atau D-Pad layar)</span>
+                  </div>
+
+                  <button class="btn btn-primary btn-arcade-start" id="btnStartGame">
+                    <span id="startBtnText">MULAI GAME</span>
+                    <span class="btn-glow-ring"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Arcade Control Dashboard -->
+            <div class="arcade-controls-panel">
+              <div class="panel-left">
+                <!-- Sound Synthesizer Toggle -->
+                <button class="btn-control-tool" id="btnToggleAudio" title="Toggle Sound Synthesizer">
+                  <span class="tool-icon" id="audioIcon">🔊</span>
+                  <span class="tool-label" id="audioText">Sound ON</span>
+                </button>
+
+                <!-- Speed / Difficulty Selector -->
+                <div class="difficulty-group">
+                  <span class="tool-caption">Mode:</span>
+                  <button class="btn-diff active" data-speed="110">Normal</button>
+                  <button class="btn-diff" data-speed="75">Cyber (Cepat)</button>
+                  <button class="btn-diff" data-speed="50">Insane 🔥</button>
+                </div>
+              </div>
+
+              <div class="panel-right">
+                <button class="btn-control-tool" id="btnPauseGame">
+                  <span class="tool-icon">⏸️</span>
+                  <span class="tool-label">Jeda</span>
+                </button>
+                <button class="btn-control-tool" id="btnResetHigh">
+                  <span class="tool-icon">🔄</span>
+                  <span class="tool-label">Reset Skor</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Mobile Touch D-Pad -->
+            <div class="mobile-dpad">
+              <div class="dpad-title">KONTROL SENTUH (MOBILE / TABLET)</div>
+              <div class="dpad-grid">
+                <button class="dpad-btn up" id="dpadUp" aria-label="Atas">▲</button>
+                <div class="dpad-middle-row">
+                  <button class="dpad-btn left" id="dpadLeft" aria-label="Kiri">◀</button>
+                  <div class="dpad-center-hub">●</div>
+                  <button class="dpad-btn right" id="dpadRight" aria-label="Kanan">▶</button>
+                </div>
+                <button class="dpad-btn down" id="dpadDown" aria-label="Bawah">▼</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-kicker">MARI BERHUBUNGAN</p>
+          <h2 class="section-title">Tertarik Berkolaborasi atau <span class="gradient-text">Bertukar Ide?</span></h2>
+          <p class="section-subtitle">Pintu komunikasi selalu terbuka untuk diskusi pemrograman, proyek RPL, atau magang industri.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Card Info -->
+          <div class="contact-card info-side">
+            <h3 class="contact-card-title">Informasi Profil</h3>
+            <p class="contact-intro">
+              Jangan ragu untuk menyapa atau mendiskusikan topik seputar teknologi, web development, dan kegiatan di SMK Telkom Lampung!
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">👤</div>
+                <div>
+                  <span class="c-label">Nama Lengkap</span>
+                  <strong class="c-val">M. Bahrain Arrafi</strong>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">🏫</div>
+                <div>
+                  <span class="c-label">Sekolah & Kelas</span>
+                  <strong class="c-val">XI RPL 1 · SMK Telkom Lampung</strong>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <span class="c-label">Lokasi</span>
+                  <strong class="c-val">Lampung, Indonesia</strong>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <span class="c-label">Email Pelajar</span>
+                  <strong class="c-val" id="emailText">bahrain.arrafi.rpl@gmail.com</strong>
+                </div>
+                <button class="btn-copy" id="btnCopyEmail" title="Salin Email">Salin</button>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-box">
+              <span class="social-title">Media Sosial & Portofolio:</span>
+              <div class="social-icons">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-card form-side">
+            <h3 class="contact-card-title">Kirim Pesan Langsung</h3>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Nama Anda</label>
+                <input type="text" id="senderName" class="form-input" placeholder="Misal: Budi Santoso" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Alamat Email</label>
+                <input type="email" id="senderEmail" class="form-input" placeholder="nama@email.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderSubject" class="form-label">Subjek / Topik</label>
+                <input type="text" id="senderSubject" class="form-input" placeholder="Tawaran Kolaborasi / Diskusi Web RPL" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">Pesan</label>
+                <textarea id="senderMessage" class="form-input form-textarea" rows="4" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="btnSubmitForm">
+                <span>Kirim Pesan Sekarang</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+              </button>
+
+              <div class="form-status" id="formStatus"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Details Modal Popup -->
+  <div class="modal-backdrop" id="projectModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup Detail Proyek">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Content injected dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-box">
+            <span class="logo-text">BA</span>
+          </div>
+          <div>
+            <h4 class="footer-name">M. Bahrain Arrafi</h4>
+            <p class="footer-sub">Software Engineering Enthusiast · XI RPL 1</p>
+          </div>
+        </div>
+
+        <div class="footer-school-tag">
+          <span class="telkom-badge">SMK TELKOM LAMPUNG</span>
+          <p class="school-motto">"The Real Informatics School"</p>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> <strong>M. Bahrain Arrafi</strong>. Semua hak cipta dilindungi. Dibuat dengan cinta untuk RPL SMK Telkom Lampung.
+        </p>
+        <div class="footer-links">
+          <a href="#hero">Kembali ke Atas ↑</a>
+          <span class="sep">•</span>
+          <a href="#game">Mini-Game</a>
+          <span class="sep">•</span>
+          <a href="#contact">Kontak</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll To Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Kembali ke atas">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
